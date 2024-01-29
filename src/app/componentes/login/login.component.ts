@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  loginForma = this.fb.group({
+    email: ['', Validators.required],
+    password: ['', Validators.required]
+  });
 
+  constructor(private fb: FormBuilder) {
+
+  }
 }

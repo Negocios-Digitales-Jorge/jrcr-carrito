@@ -1,14 +1,17 @@
-<form action="">
+<form [formGroup]="loginForma">
     <p-card header="Ingresar al Sistema" [style]="{width:'360px'}">
         <div class="field">
             <label for="email">Correo Electronico</label>
-            <input  type="text" 
-                    pInputText formControlName="email" 
-                    name="email" 
-                    class="w-full" 
-                    placeholder="Ingresa Email"
-            />
+            <input type="text" pInputText formControlName="email" name="email" class="w-full"
+                placeholder="Ingresa Email" />
+
+            <label for="email">Contraseña</label>
+            <input type="password" pInputText formControlName="password" name="password" class="w-full"
+                placeholder="Ingresa Contraseña" />
         </div>
-       
+        <p-button label="Submit" styleClass="w-full"></p-button>
+        <div class="mt-2">
+            ¿Ya te registraste? <a routerLink="/register">Registrate</a>
+        </div>
     </p-card>
 </form>
