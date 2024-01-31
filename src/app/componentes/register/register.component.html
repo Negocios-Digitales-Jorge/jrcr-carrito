@@ -1,9 +1,43 @@
 <form [formGroup]="registerForma">
     <p-card header="Registro" [style]="{width: '360px'}">
+        <label for="fullName">Nombre Completo</label>
         <div class="field">
-            <input type="text" pInputText formControlName="name" name="name" class="w-full"
+            <input type="text" pInputText formControlName="fullName" name="fullName" class="w-full"
                 placeholder="Ingresa nombre completo" />
-
         </div>
+        <small *ngIf="fullName.invalid && (fullName.dirty||fullName.touched)" class="block p-error">
+            <div *ngIf="fullName.errors?.['required']">Se requiere nombre</div>
+            <div *ngIf="fullName.errors?.['pattern']">Nombre debera ser valido</div>
+        </small>
+
+        <label for="email">Correo Electronico</label>
+            <input type="text" pInputText formControlName="email" name="email" class="w-full"
+                placeholder="Ingresa Email" />
+            <small *ngIf="email.invalid && (email.dirty||email.touched)" class="block p-error">
+                <div *ngIf="email.errors">Email es requerido</div>
+                <div *ngIf="email.errors?.['email']">Email es incorrecto</div>
+            </small>
+            
+            <label for="password">Contraseña</label>
+            <input type="password" pInputText formControlName="password" name="password" class="w-full"
+                placeholder="Ingresa Contraseña" />
+            <small *ngIf="password.invalid && (password.dirty||password.touched)" class="block p-error">
+                <div *ngIf="password.errors?.['required']">Contraseña necesaria</div>              
+            </small>
+            
+            <label for="confirmPassword">Confirmar Contraseña</label>
+            <input type="password" pInputText formControlName="confirmPassword" name="confirmPassword" class="w-full"
+                placeholder="Confirma Contraseña" />
+            <small *ngIf="password.invalid && (confirmPassword.dirty||confirmPassword.touched)" class="block p-error">
+                <div *ngIf="password.errors?.['required']">Confirmar Contraseña</div>              
+            </small>
+            <small *ngIf="registerForma.errors?.['passwordMismatch'] && confirmPassword.valid && password.valid"class="block p-error">
+                Contraseñas no coinciden
+            </small>
+            
+            <p-button label="Registrarse" styleClass="w-full" [disabled]="registerForma.invalid" ></p-button>
+            <div class="mt-2">
+                ¿Ya eres miembro? <a routerLink="/login">Inicia Sesion</a>
+            </div>
     </p-card>
 </form>
