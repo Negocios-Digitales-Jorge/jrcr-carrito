@@ -10,7 +10,7 @@
                 <div *ngIf="email.errors?.['email']">Email es incorrecto</div>
             </small>
 
-            <label for="email">Contraseña</label>
+            <label for="password">Contraseña</label>
             <input type="password" pInputText formControlName="password" name="password" class="w-full"
                 placeholder="Ingresa Contraseña" />
             <small *ngIf="password.invalid && (password.dirty||password.touched)" class="block p-error">
