@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "fullname": "Jorge Cruz",
+      "email": "jorgeraukcruzreyes29@gmail.com",
+      "password": 123456789,
+      "id": "034b"
+    },
+    {
+      "id": "1790",
+      "fullName": "Jorge",
+      "email": "jorgeelempresario935@gmail.com",
+      "password": "HaloReach2010#"
+    },
+    {
+      "id": "ee26",
+      "fullName": "Jorge",
+      "email": "jorgeelempresario935@gmail.com",
+      "password": "HaloReach2010#"
+    },
+    {
+      "id": "2618",
+      "fullName": "Jorge Raúl Cruz Reyes",
+      "email": "colegioagazzijorge1sec@gmail.com",
+      "password": "CallOfDuty2010@"
+    }
+  ]
+}
