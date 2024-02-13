@@ -1,1 +1,8 @@
-<p>header works!</p>
+<p-sidebar [(visible)]="sidebarVisible1" position="left">
+    <h3>Left Sidebar</h3>
+    <div class="cart">
+        <img src="/src/assets/img/shopping-cart_1170678.png">
+        <span>Mi carrito</span>
+    </div>
+</p-sidebar>
+<p-button type="button" class="mr-2" (click)="sidebarVisible1 = true" icon="pi pi-arrow-right"></p-button>

@@ -12,6 +12,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MessageService } from 'primeng/api';
+import { SidebarModule } from 'primeng/sidebar';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MessageService } from 'primeng/api';
     RegisterComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { MessageService } from 'primeng/api';
     AppRoutingModule,
     PrimengModule,
     HttpClientModule,
+    SidebarModule,
     
   ],
   providers: [MessageService,

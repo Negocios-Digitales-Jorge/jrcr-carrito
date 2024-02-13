@@ -4,7 +4,61 @@
 @import "primeflex/primeflex.css";
 @import "primeicons/primeicons.css";
 
-html,body{
+html,
+body {
     height: 100%;
     margin: 0;
+}
+
+.header {
+    text-align: center;
+    min-height: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid;
+    margin: 10px;
+    background-color: gray;
+    border-radius: 5px;
+    -webkit-box-shadow: -2px 10px 32px 0px rgba(0, 0, 0, 0.83);
+    -moz-box-shadow: -2px 10px 32px 0px rgba(0, 0, 0, 0.83);
+    box-shadow: -2px 10px 32px 0px rgba(0, 0, 0, 0.83);
+
+
+}
+
+.footer {
+    text-align: center;
+    min-height: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid;
+    margin: 10px;
+    background-color: gray;
+    border-radius: 5px;
+    -webkit-box-shadow: -2px 10px 32px 0px rgba(0, 0, 0, 0.83);
+    -moz-box-shadow: -2px 10px 32px 0px rgba(0, 0, 0, 0.83);
+    box-shadow: -2px 10px 32px 0px rgba(0, 0, 0, 0.83);
+
+}
+
+.content {
+    border: 1px solid;
+    display: block;
+    min-height: calc(100vh - 80px);
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin: 10px;
+    border-radius: 5px;
+
+
+}
+
+div.cart{
+    float: right;
+    margin-right: 5px;
+}
+.cart img{
+    height: 30px;
+    width: 30px;
 }
