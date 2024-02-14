@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { InputTextModule } from 'primeng/inputtext';
+import { InputText } from 'primeng/inputtext';
 import { ToastModule } from 'primeng/toast';
-import { MenubarModule } from 'primeng/menubar'; 
 import { SidebarModule } from 'primeng/sidebar';
 
-
-const modPrimeNg: any = [
+const componentes: any = [
   ButtonModule,
   CardModule,
-  InputTextModule,
+  InputText,
   ToastModule,
-  MenubarModule,
   SidebarModule
 ]
 
@@ -21,10 +19,7 @@ const modPrimeNg: any = [
   declarations: [],
   imports: [
     CommonModule,
-
-    modPrimeNg
-  ], exports: [
-    modPrimeNg
+    CardModule
   ]
 })
-export class PrimengModule { }
+export class ModPrimeNgModule { }

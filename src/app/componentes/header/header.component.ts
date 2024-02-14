@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
-sidebarVisible1: boolean = false;
+  sidebarVisible1: boolean = false;
 
 }
