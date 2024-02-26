@@ -16,6 +16,7 @@ import { ProductosModule } from './modulos/productos/productos.module';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { ProductosService } from './servicios/productos.service';
 
 @NgModule({
   declarations: [
@@ -43,4 +44,9 @@ import { CardModule } from 'primeng/card';
   provideClientHydration()],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(private service:ProductosService){
+    localStorage.setItem('cart',JSON.stringify([]))
+  }
+ }

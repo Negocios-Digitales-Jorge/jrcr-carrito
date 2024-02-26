@@ -1,8 +1,9 @@
-<p-sidebar [(visible)]="sidebarVisible1" position="left">
-    <h3>Menu</h3>
+<p-sidebar [(visible)]="sidebarVisible1" position="top">
+    <span>Store</span>
     <div class="cart">
-        <img src="/src/assets/img/shopping-cart_1170678.png">
-        <span>Mi carrito</span>
+        <img src="/assets/img/carrito.jpg">
+        <span class="cart">Mi Carrito</span>
     </div>
 </p-sidebar>
-<p-button type="button" class="mr-2" (click)="sidebarVisible1 = true" icon="pi pi-arrow-right"></p-button>
+<p-button type="button" class="mr-2" (click)="sidebarVisible1 = true" icon="pi pi-bars">
+</p-button> 

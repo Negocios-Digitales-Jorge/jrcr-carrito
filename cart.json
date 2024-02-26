@@ -1,0 +1,5 @@
+{"productos":[
+    {"id":1,"nombre":"Audifonos", "descripcion":"Audifonos JBL unicp modelo disponible", "precio":100,"imagen":"/assets/img/audifonos.jpg"},
+    {"id":2,"nombre":"Chamarra", "descripcion":"WebCam Desc 1", "precio":100,"imagen":"/assets/img/chamarra.jpg"},
+    {"id":3,"nombre":"Lentes", "descripcion":"WebCam Desc 1", "precio":100,"imagen":"/assets/img/Lentes.jpg"}
+]}

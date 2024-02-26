@@ -42,26 +42,32 @@ body {
 }
 
 .content {
-    border: 1px solid;
     display: block;
+    border: 1px solid;
     min-height: calc(100vh - 80px);
-    text-align: center;
     margin-left: 10%;
-    margin-right: 10%;
-    margin: 10px;
-    border-radius: 5px;
+    text-align: center;
+    width: 80%;
 
-    .product{
-
+    .producto {
+        display: inline-block;
+        margin-left: 5px;
+        margin-top: 5px;
+        width: 300px;
     }
-
 }
 
-div.cart{
+
+div.cart {
     float: right;
     margin-right: 5px;
 }
-.cart img{
+
+.cart img {
     height: 30px;
     width: 30px;
 }
+
+.cart span {
+    font-size: 0.5rem;
+}   

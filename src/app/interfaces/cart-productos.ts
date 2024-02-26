@@ -1,7 +1,8 @@
-export interface Producto {
+export interface CartProductos {
     id:number,
     nombre:string,
     descripcion:string,
     precio:number,
-    imagen:string
+    imagen:string,
+    cantidad:number
 }

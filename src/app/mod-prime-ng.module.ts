@@ -19,7 +19,8 @@ const componentes: any = [
   declarations: [],
   imports: [
     CommonModule,
-    CardModule
+    CardModule,
+    
   ]
 })
 export class ModPrimeNgModule { }
