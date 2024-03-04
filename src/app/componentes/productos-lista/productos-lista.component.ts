@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Producto } from '../../interfaces/producto';
 import { ProductosService } from '../../servicios/productos.service';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-productos-lista',
@@ -8,10 +9,14 @@ import { ProductosService } from '../../servicios/productos.service';
   styleUrl: './productos-lista.component.css'
 })
 export class ProductosListaComponent {
+
+
+
   productos: Producto[] = [];
 
-  constructor (private servProductos: ProductosService){
-    
+
+  constructor(private servProductos: ProductosService) {
+
   }
 
   ngOnInit(): void {
@@ -20,5 +25,22 @@ export class ProductosListaComponent {
       response => this.productos = response
     );
   }
+
+  getSeverity (product: Producto) {
+    switch (product.inventoryStatus) {
+        case 'INSTOCK':
+            return 'success';
+
+        case 'LOWSTOCK':
+            return 'warning';
+
+        case 'OUTOFSTOCK':
+            return 'danger';
+
+        default:
+            return null;
+    }
+};
+
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 
 @Component({
@@ -9,5 +9,10 @@ import { Component } from '@angular/core';
 
 export class HeaderComponent {
   sidebarVisible1: boolean = false;
+  @Output() show: EventEmitter<void>= new EventEmitter<void>()
+
+  showCart(){
+    this.show.emit
+  }
 
 }

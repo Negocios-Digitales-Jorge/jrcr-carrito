@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Producto } from '../../interfaces/producto';
 import { CartProductos } from '../../interfaces/cart-productos';
+import { ProductosService } from '../../servicios/productos.service';
 
 @Component({
   selector: 'app-productos',
@@ -11,23 +12,27 @@ export class ProductosComponent {
 
   @Input() producto?: Producto;
 
-  cart: CartProductos[] = []
+  cart: CartProductos[] = [];
+  productos: Producto[]=[];
 
-  constructor() {
+  constructor(private productosService: ProductosService) {
 
   }
+
+  
+
   get nombre() {
     return this, this.producto?.nombre
   }
 
-  add() {
+  add(): void {
     console.log("Estou comprando teclado" + this.producto?.nombre)
     this.cart = JSON.parse(localStorage.getItem('cart') as string)
 
     if (this.cart.length > 0) {
-      this.cart.forEach(elem =>{
-        if(elem.id===this.producto?.id){
-        elem.cantidad+=1
+      this.cart.forEach(elem => {
+        if (elem.id === this.producto?.id) {
+          elem.cantidad += 1
         }
       })
     } else {

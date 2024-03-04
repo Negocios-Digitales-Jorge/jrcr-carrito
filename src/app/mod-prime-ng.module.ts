@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { DataViewModule } from 'primeng/dataview';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { InputText } from 'primeng/inputtext';
@@ -12,7 +12,8 @@ const componentes: any = [
   CardModule,
   InputText,
   ToastModule,
-  SidebarModule
+  SidebarModule,
+  DataView,
 ]
 
 @NgModule({

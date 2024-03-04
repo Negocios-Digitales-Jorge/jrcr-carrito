@@ -17,6 +17,8 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { ProductosService } from './servicios/productos.service';
+import { DataViewModule } from 'primeng/dataview';
+import { CartComponent } from './componentes/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { ProductosService } from './servicios/productos.service';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    CartComponent,
     
   ],
   imports: [
@@ -37,7 +40,8 @@ import { ProductosService } from './servicios/productos.service';
     SidebarModule,
     ProductosModule,
     ButtonModule,
-    CardModule
+    CardModule,
+    DataViewModule
     
   ],
   providers: [MessageService,
